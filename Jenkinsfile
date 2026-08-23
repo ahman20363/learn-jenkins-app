@@ -85,6 +85,7 @@ pipeline {
                 }
             }
             steps {
+                withCredentials([string(credentialsId: 'netlify-token', variable: 'NETLIFY_AUTH_TOKEN')]) {
                 sh '''
                     npm install netlify-cli
                     node_modules/.bin/netlify --version
