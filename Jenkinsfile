@@ -110,6 +110,8 @@ pipeline {
 
             steps {
                 sh '''
+                    echo "CI_ENVIRONMENT_URL=$CI_ENVIRONMENT_URL"
+                    node -e "console.log('BASE_URL:', process.env.BASE_URL)"
                     npx playwright test --reporter=html
                 '''
             }
