@@ -105,13 +105,13 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
+           //     CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
+                  BASE_URL = 'https://effervescent-entremet-5d2093.netlify.app'
             }        
 
             steps {
                 sh '''
-                    echo "CI_ENVIRONMENT_URL=$CI_ENVIRONMENT_URL"
-                    node -e "console.log('BASE_URL:', process.env.BASE_URL)"
+                    echo "BASE_URL=$BASE_URL"
                     npx playwright test --reporter=html
                 '''
             }
