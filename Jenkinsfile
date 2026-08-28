@@ -122,9 +122,9 @@ pipeline {
                 }
             }
 
-        //    environment {
-         //       CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app/'
-         //   }        
+            environment {
+               CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
+            }        
 
             steps {
                 sh '''
