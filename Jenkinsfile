@@ -105,7 +105,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
+                CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app/'
             }        
 
             steps {
@@ -116,7 +116,7 @@ pipeline {
 
             post {
                 always {
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright E2E', reportTitles: '', useWrapperFileDirectly: true])
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright Prod E2E', reportTitles: '', useWrapperFileDirectly: true])
                 }   
             }
         }       
