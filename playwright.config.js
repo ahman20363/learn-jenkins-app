@@ -29,7 +29,7 @@ module.exports = defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     /* baseURL: process.env.CI_ENVIRONMENT_URL || 'http://localhost:3000', */
-    baseURL: process.env.CI_ENVIRONMENT_URL || 'https://effervescent-entremet-5d2093.netlify.app/',
+    baseURL: process.env.CI_ENVIRONMENT_URL || 'https://effervescent-entremet-5d2093.netlify.app',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
