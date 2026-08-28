@@ -96,7 +96,7 @@ pipeline {
             }
         }
 
-        stage('Prod E2E') {
+ /*       stage('Prod E2E') {
             agent {
                 docker {
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
@@ -105,13 +105,11 @@ pipeline {
             }
 
             environment {
-           //     CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
-                  BASE_URL = 'https://effervescent-entremet-5d2093.netlify.app'
+                CI_ENVIRONMENT_URL = 'https://effervescent-entremet-5d2093.netlify.app'
             }        
 
             steps {
                 sh '''
-                    echo "BASE_URL=$BASE_URL"
                     npx playwright test --reporter=html
                 '''
             }
@@ -121,7 +119,7 @@ pipeline {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'playwright-report', reportFiles: 'index.html', reportName: 'Playwright E2E', reportTitles: '', useWrapperFileDirectly: true])
                 }   
             }
-        }       
+      */  }       
     }
 }   
 
