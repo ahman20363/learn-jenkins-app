@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        
+
         stage('Build') {
             agent {
                 docker {
@@ -33,6 +33,7 @@ pipeline {
             agent {
                 docker {
                     image 'amazon/aws-cli'
+                    reuseNode true
                     args "--entrypoint=''"
                 }
             }
